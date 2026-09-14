@@ -1,34 +1,49 @@
 import { useState } from "react";
 import { Outlet } from "react-router-dom";
-
-import Sidebar from "./Sidebar";
 import Header from "./Header";
+import Sidebar from "./Sidebar";
 
 const MainLayout = () => {
-  const [sideBarCollapsed, setSideBarCollapsed] =
-    useState(false);
-    
-  const handleSidebarToggle = () => {
-    setSideBarCollapsed((prev) => !prev);
-  };
-  return (
-  <div className='min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 transition-all duration-500'>
-    <div className="flex h-screen overflow-hidden">
-      <Sidebar
-        collapsed={sideBarCollapsed}
-        onToggle={() =>
-          setSideBarCollapsed((prev) => !prev)
-        }
-      />
+  // Desktop sidebar state
+  const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
 
-      <div className="flex flex-1 flex-col overflow-hidden">
-        <Header onSidebarToggle={handleSidebarToggle}/>
-        <main className="flex-1 overflow-y-auto">
-          <Outlet />
-        </main>
+  // Mobile sidebar state
+  const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false);
+
+  const handleSidebarToggle = () => {
+    setSidebarCollapsed((prev) => !prev);
+  };
+
+  const handleMobileSidebarToggle = () => {
+    setMobileSidebarOpen((prev) => !prev);
+  };
+
+  const handleMobileSidebarClose = () => {
+    setMobileSidebarOpen(false);
+  };
+
+  return (
+    <div className="min-h-screen bg-slate-50 dark:bg-slate-950">
+      <div className="flex h-screen overflow-hidden">
+        <Sidebar
+          collapsed={sidebarCollapsed}
+          onToggle={handleSidebarToggle}
+          mobileOpen={mobileSidebarOpen}
+          onMobileClose={handleMobileSidebarClose}
+        />
+
+        <div className="flex min-w-0 flex-1 flex-col overflow-hidden">
+          <Header
+            onSidebarToggle={handleSidebarToggle}
+            onMobileSidebarToggle={handleMobileSidebarToggle}
+          />
+
+          <main className="flex-1 overflow-y-auto">
+            <Outlet />
+          </main>
+        </div>
       </div>
     </div>
-  </div>
   );
 };
 

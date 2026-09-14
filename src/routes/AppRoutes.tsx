@@ -7,7 +7,7 @@ import Dashboard from "../pages/admin/Dashboard";
 import AnalyticsOverview from "../pages/admin/AnalyticsOverview";
 import AnalyticsReports from "../pages/admin/AnalyticsReports";
 import AnalyticsInsights from "../pages/admin/AnalyticsInsights";
-import AdminLogin from "../pages/admin/login"; 
+import AdminLogin from "../pages/admin/Login"; 
 import ProtectedRoute from "./ProtectedRoute";
 const AppRoutes = () => {
   return (
