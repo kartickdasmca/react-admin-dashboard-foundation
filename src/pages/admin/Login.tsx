@@ -49,6 +49,7 @@ const Login = () => {
               id="email"
               type="email"
               placeholder="Enter your email"
+              value={`admin@kartickdas.com`}
               className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 outline-none transition focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 dark:border-slate-700 dark:bg-slate-800 dark:text-white dark:placeholder:text-slate-500"
             />
           </div>
@@ -75,6 +76,7 @@ const Login = () => {
               id="password"
               type="password"
               placeholder="Enter your password"
+              value={`123456allgood`}
               className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 outline-none transition focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 dark:border-slate-700 dark:bg-slate-800 dark:text-white dark:placeholder:text-slate-500"
             />
           </div>
