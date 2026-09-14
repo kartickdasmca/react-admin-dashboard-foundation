@@ -7,6 +7,8 @@ import Dashboard from "../pages/admin/Dashboard";
 import AnalyticsOverview from "../pages/admin/AnalyticsOverview";
 import AnalyticsReports from "../pages/admin/AnalyticsReports";
 import AnalyticsInsights from "../pages/admin/AnalyticsInsights";
+import Messages from "../pages/admin/Messages";
+import Settings from "../pages/admin/Settings";
 import AdminLogin from "../pages/admin/Login"; 
 import ProtectedRoute from "./ProtectedRoute";
 const AppRoutes = () => {
@@ -57,11 +59,11 @@ const AppRoutes = () => {
         />
         <Route
           path="/admin/messages"
-          element={<AnalyticsInsights />}
+          element={<Messages />}
         />
         <Route
           path="/admin/settings"
-          element={<AnalyticsInsights />}
+          element={<Settings />}
         />
       </Route>
       </Route>

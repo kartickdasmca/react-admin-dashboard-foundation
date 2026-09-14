@@ -1,13 +1,13 @@
+import React from 'react'
 
-
-const AnalyticsInsights = () => {
+const Messages = () => {
   return (
     <div className="p-6">
       <h1 className="text-2xl font-bold">
-        Analytics Insights
+        Messages
       </h1>
     </div>
   )
 }
 
-export default AnalyticsInsights
+export default Messages
