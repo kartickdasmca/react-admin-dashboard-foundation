@@ -1,5 +1,3 @@
-# React + TypeScript + Vite
-
 # React Admin Dashboard
 
 A reusable, modern admin dashboard built with **React, TypeScript, Tailwind CSS, and React Router**.
@@ -65,47 +63,12 @@ This project follows production-oriented frontend practices such as:
 
 This project is intended for personal learning, portfolio development, and reuse as a frontend admin-dashboard foundation.
 
-## 📁 Project Structure
 
-src/
-├── components/
-│   ├── common/
-│   └── layout/
-│       ├── AdminLayout/
-│       │   ├── Header.tsx
-│       │   ├── MainLayout.tsx
-│       │   └── Sidebar.tsx
-│       │
-│       ├── PublicLayout/
-│       └── AuthLayout/
-│
-├── context/
-│   └── AuthContext.tsx
-│
-├── data/
-│   └── sidebarData.ts
-│
-├── hooks/
-│
-├── pages/
-│   ├── admin/
-│   └── public/
-│
-├── routes/
-│   ├── AppRoutes.tsx
-│   └── ProtectedRoute.tsx
-│
-├── services/
-│
-├── types/
-│
-└── utils/
-
-🛠️ Getting Started
+## 🛠️ Getting Started
 
 Clone the repository:
 
-git clone <repository-url>
+git clone <https://github.com/kartickdasmca/react-admin-dashboard-foundation>
 
 Navigate to the project:
 
